@@ -1,3 +1,6 @@
 ﻿  StudentGradeReport0172.cpp
-C:\Saad\StudentGradeReport\ITCProject\StudentGradeReport\StudentGradeReport0172.cpp(32,62): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Saad\StudentGradeReport\ITCProject\StudentGradeReport\StudentGradeReport0172.cpp(33,62): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Saad\StudentGradeReport\ITCProject\StudentGradeReport\StudentGradeReport0172.cpp(97,32): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Saad\StudentGradeReport\ITCProject\StudentGradeReport\StudentGradeReport0172.cpp(124,32): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+C:\Saad\StudentGradeReport\ITCProject\StudentGradeReport\StudentGradeReport0172.cpp(150,36): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
   StudentGradeReport.vcxproj -> C:\Saad\StudentGradeReport\ITCProject\x64\Debug\StudentGradeReport.exe
