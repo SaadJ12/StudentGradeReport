@@ -8,7 +8,8 @@ int main() {
     char grading[1000];
     bool flag = true;
 
-    cout << "Welcome to Admin Panel" << endl;
+    cout << "                                                  Welcome to Admin Panel                                                                " << endl;
+    cout << "------------------------------------------------------------------------------------------------------------------------" << endl;
     cout << "Enter Roll Numbers and their data to enroll students" << endl;
 
     while (flag) {
@@ -75,6 +76,7 @@ int main() {
     cout << "Press 4 to update Marks of Maths of a particular Student." << endl;
     cout << "Press 5 to update Marks of Maths for all Students." << endl;
     cout << "Press 6 to sort the data according to Percentages of a students." << endl;
+    cout << "Press 7 to delete the data of a particular student." << endl;
     cin >> options;
     if (options == 1) {
         cout << "Enter the roll of a Student: ";
@@ -226,18 +228,47 @@ int main() {
                     }
                 }
             }
-            cout << "Data sorted based on percentages in ascending order:" << endl;
-            for (int i = 0; i < studentNumber; i++) {
-                cout << "Roll Number of student " << (i + 1) << " is: " << roll[i] << endl;
-                cout << "Marks of Computer Science of student " << (i + 1) << " is: " << computer[i] << endl;
-                cout << "Marks of Maths of student " << (i + 1) << " is: " << maths[i] << endl;
-                cout << "Percentage of student " << (i + 1) << " is: " << percentage[i] << endl;
-                cout << "Grade of student " << (i + 1) << " is: " << grading[i] << endl;
-                cout << endl;
+        cout << "Data sorted based on percentages in ascending order:" << endl;
+        for (int i = 0; i < studentNumber; i++) {
+        cout << "Roll Number of student " << (i + 1) << " is: " << roll[i] << endl;
+        cout << "Marks of Computer Science of student " << (i + 1) << " is: " << computer[i] << endl;
+        cout << "Marks of Maths of student " << (i + 1) << " is: " << maths[i] << endl;
+        cout << "Percentage of student " << (i + 1) << " is: " << percentage[i] << endl;
+        cout << "Grade of student " << (i + 1) << " is: " << grading[i] << endl;
+        cout << endl;
+        }
+        }
+        else if (options == 7) {
+        cout << "Type a roll Number you want to delete: ";
+        cin >> checkRoll;
+
+        int indexToDelete = -1;
+        for (int i = 0; i < studentNumber; i++) {
+        if (checkRoll == roll[i]) {
+        indexToDelete = i;
+        break;
+                }
+            }
+
+        if (indexToDelete != -1) {
+        for (int i = indexToDelete; i < studentNumber - 1; i++) {
+        roll[i] = roll[i + 1];
+        computer[i] = computer[i + 1];
+        maths[i] = maths[i + 1];
+        marks[i] = marks[i + 1];
+        percentage[i] = percentage[i + 1];
+        grading[i] = grading[i + 1];
+                }
+
+        studentNumber--;
+
+        cout << "Record of student with Roll Number " << checkRoll << " has been deleted." << endl;
+            }
+        else {
+        cout << "No student with Roll Number " << checkRoll << " found." << endl;
             }
         }
 
-        
 
 
     system("pause");
